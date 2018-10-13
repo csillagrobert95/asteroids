@@ -454,7 +454,7 @@ Ship = function () {
     }
     if (KEY_STATUS.space) {
       if (this.delayBeforeBullet <= 0) {
-<<<<<<< HEAD
+
           this.delayBeforeBullet = 10;
         for (var i = 0; i < this.bullets.length; i++) {
           if (!this.bullets[i].visible) {
@@ -472,7 +472,6 @@ Ship = function () {
             break;
           }
         }
-||||||| merged common ancestors
         this.delayBeforeBullet = 10;
         for (var i = 0; i < this.bullets.length; i++) {
           if (!this.bullets[i].visible) {
@@ -490,10 +489,10 @@ Ship = function () {
             break;
           }
         }
-=======
+
         this.delayBeforeBullet = 10;
         this.shoot();
->>>>>>> coins
+
       }
     }
 
@@ -762,6 +761,8 @@ Coin = function () {
               0, -5]);
 
   this.collidesWith = ["ship"];
+    this.color = 'yellow';
+    this.solid = true;
 
   this.newPosition = function () {
     this.x = Math.random() * Game.canvasWidth;
